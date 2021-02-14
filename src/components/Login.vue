@@ -23,8 +23,8 @@
         />
       </svg>
     </figure>
-    <form>
-      <div class="seccion">
+    <form class="form">
+      <div class="form__section">
         <input
           :class="{ filled: email }"
           v-model="email"
@@ -33,7 +33,7 @@
         />
         <label for="email">Email</label>
       </div>
-      <div class="seccion">
+      <div class="form__section">
         <input
           :class="{ filled: password }"
           v-model="password"
@@ -43,11 +43,11 @@
         />
         <label for="password">Password</label>
       </div>
-      <div class="seccion">
+      <div class="form__section">
         <button class="bIniciar" @click="login">Log In</button>
       </div>
     </form>
-    <div class="error">{{ errors }}</div>
+    <div class="card__test--error">{{ errors }}</div>
   </div>
 </template>
 
@@ -91,7 +91,7 @@ label {
   top: 0;
 }
 input:focus ~ label,
-.filled ~ label {
+.form__section .filled ~ label {
   top: -1rem;
   left: 0;
   transform: scale(0.7);
@@ -99,19 +99,19 @@ input:focus ~ label,
 input:focus {
   outline: none;
 }
-form {
-  width: 90%;
-}
 figure {
   fill: rgba(20, 100, 165, 1);
   margin-bottom: 2rem;
 }
-.seccion {
+.form {
+  width: 90%;
+}
+.form__section {
   display: block;
   height: 5rem;
   position: relative;
 }
-.error {
+.card__test--error {
   color: coral;
 }
 </style>

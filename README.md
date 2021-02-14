@@ -4,7 +4,7 @@ Estes es un ejemplo de sistema de login realizado en Vue.js y con soporte de usu
 La autentificación se hace en servidor con firebase auth.
 Cómo librería externa he usado moment.js para el manejo de fechas más cómodo.
 
-## Installación
+## Instalación
 
 Descargar el repo e instalarlo
 
@@ -25,6 +25,10 @@ Puede usar el usuario de ejemplo
 ususario: admin@example.com
 password: 123456789
 ```
+```sh
+ususario: user@example.com
+password: 123456789
+```
 
 La aplicación consta de dos vistas, una de login y otra que muestra el tiempo que lleva logueado el usario a la que sólo se puede acceder una vez realizado el log-in con éxito.
 
@@ -34,7 +38,12 @@ He aprovechado las 'guard' de vue router, para proteger la vista logueada.
 
 La aplicación no valida desde el lado del cliente, se limita a mostar los errores que firebase auth devuelve.
 
+## Deploy
 
+La versioón live de la aplicación está alojada en el servidor firebase
+```sh
+https://login-system-2459d.web.app/
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
