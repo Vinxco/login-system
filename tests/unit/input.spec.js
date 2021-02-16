@@ -17,5 +17,4 @@ describe("Input.vue", () => {
 
     expect(wrapper).toMatchSnapshot();
   });
-
 });

@@ -45,10 +45,11 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import userMixin from "@/services/User.js";
 import InputSection from "@/components/Input.vue";
 export default {
   name: "Login",
+  mixins: [userMixin],
   components: {
     InputSection
   },
@@ -58,17 +59,6 @@ export default {
       password: "",
       errors: ""
     };
-  },
-  methods: {
-    login() {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(
-          () => this.$router.replace("home"),
-          error => (this.errors = error.message)
-        );
-    }
   }
 };
 </script>
