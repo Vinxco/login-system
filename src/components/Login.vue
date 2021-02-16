@@ -24,27 +24,20 @@
       </svg>
     </figure>
     <form class="form">
+      <input-section
+        type="email"
+        label="Email"
+        v-model="email"
+        :class="{ filled: email }"
+      ></input-section>
+      <input-section
+        type="password"
+        label="Password"
+        v-model="password"
+        :class="{ filled: password }"
+      ></input-section>
       <div class="form__section">
-        <input
-          :class="{ filled: email }"
-          v-model="email"
-          type="email"
-          id="email"
-        />
-        <label for="email">Email</label>
-      </div>
-      <div class="form__section">
-        <input
-          :class="{ filled: password }"
-          v-model="password"
-          type="password"
-          id="password"
-          plaheholder="password"
-        />
-        <label for="password">Password</label>
-      </div>
-      <div class="form__section">
-        <button class="bIniciar" @click="login">Log In</button>
+        <button @click="login">Log In</button>
       </div>
     </form>
     <div class="card__test--error">{{ errors }}</div>
@@ -53,7 +46,12 @@
 
 <script>
 import firebase from "firebase";
+import InputSection from "@/components/Input.vue";
 export default {
+  name: "Login",
+  components: {
+    InputSection
+  },
   data() {
     return {
       email: "",
@@ -71,8 +69,7 @@ export default {
           error => (this.errors = error.message)
         );
     }
-  },
-  mounted() {}
+  }
 };
 </script>
 
@@ -101,15 +98,15 @@ input:focus {
 }
 figure {
   fill: rgba(20, 100, 165, 1);
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .form {
   width: 90%;
 }
 .form__section {
   display: block;
-  height: 5rem;
   position: relative;
+  margin-bottom: 1rem;
 }
 .card__test--error {
   color: coral;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timer.vue Implementation Test initializes with correct elements 1`] = `
+<main class="card">
+  <h2>Welcome!</h2>
+  <h1>The last time you accessed was</h1>
+  <section>
+    <div class="timer">
+      <div><time></time> <span>Days</span></div>
+      <div><time></time> <span>Hours</span></div>
+      <div><time></time> <span>Minutes </span></div>
+      <div><time></time> <span>Seconds</span></div>
+    </div>
+  </section> <button>Logout</button>
+</main>
+`;

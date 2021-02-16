@@ -30,7 +30,7 @@
 import firebase from "firebase";
 import moment from "moment";
 export default {
-  name: "imer",
+  name: "Timer",
   data: function() {
     return {
       currentSeconds: null,
@@ -53,14 +53,19 @@ export default {
       const login = moment(loginDate);
       const now = moment();
       const time = now.diff(login, "seconds");
-      const seconds = Math.round(time % 60);
-      const minutes = Math.floor((time / 60) % 60);
-      const hours = Math.floor((time / 3600) % 24);
-      const days = Math.floor(time / 86400);
-      this.currentSeconds = seconds;
-      this.currentMinutes = minutes;
-      this.currentHours = hours;
-      this.currentDays = days;
+      const secondsInAMInute = 60;
+      const minutesInAnHour = 60;
+      const hoursInADay = 24;
+      const secondsInAnHour = 3600;
+      const secondsInADay = 86400;
+      const seconds = Math.round(time % secondsInAMInute);
+      const minutes = Math.floor((time / secondsInAMInute) % minutesInAnHour);
+      const hours = Math.floor((time / secondsInAnHour) % hoursInADay);
+      const days = Math.floor(time / secondsInADay);
+      this.currentSeconds = seconds < 10 ? "0" + seconds : seconds;
+      this.currentMinutes = minutes < 10 ? "0" + minutes : minutes;
+      this.currentHours = hours < 10 ? "0" + hours : hours;
+      this.currentDays = days < 10 ? "0" + days : days;
     }
   },
   created() {

@@ -6,7 +6,7 @@ import firebase from "firebase";
 
 Vue.config.productionTip = false;
 
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDWTBvAn9wticbZzBmffed9SxqgCR5IFAk",
   authDomain: "login-system-2459d.firebaseapp.com",
   projectId: "login-system-2459d",

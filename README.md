@@ -16,6 +16,11 @@ para correr la aplicación
 ```sh
 npm run serve
 ```
+para correr los tests unitarios
+
+```sh
+npm run test:unit
+```
 
 ## Instrucciones
 

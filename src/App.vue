@@ -17,6 +17,7 @@
   flex-direction: column;
 }
 .card {
+  box-sizing: border-box;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@
   align-items: center;
   margin: 2rem;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
-  padding: 2rem;
+  padding: 4rem;
   height: 60vh;
   max-width: 35rem;
   width: 40vw;
@@ -39,7 +40,7 @@ button {
   background-color: rgba(20, 100, 165, 1);
   color: #fff;
   display: block;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem;
   width: 100%;
 }
 </style>

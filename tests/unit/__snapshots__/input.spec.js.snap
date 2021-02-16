@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input.vue El componente renderiza el mismo ‘snapshot’ que la última vez. 1`] = `<div class="form__section"><input id="" type=""> <label for=""></label></div>`;
